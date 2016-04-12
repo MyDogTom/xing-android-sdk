@@ -79,8 +79,8 @@ public final class XingOAuthActivity extends Activity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 if (helper.overrideRedirect(url)) {
-                    new RetrieveAccessTokenTask(XingOAuthActivity.this, helper).
-                          executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, Uri.parse(url));
+                    new RetrieveAccessTokenTask(XingOAuthActivity.this, helper)
+                          .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, Uri.parse(url));
                     return true;
                 } else {
                     return false;

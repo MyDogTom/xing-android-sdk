@@ -16,6 +16,8 @@
  */
 package com.xing.api.oauth;
 
+import android.support.annotation.NonNull;
+
 /** Utility class for basic assertion methods and shared constants. */
 final class Shared {
     static final String CONSUMER_KEY = "consumerKey";
@@ -45,7 +47,8 @@ final class Shared {
         if (object == null) throw new IllegalStateException(message);
     }
 
-    static String validate(String input, String pattern) {
+    /** Validate {@code input} string to match the provided pattern. */
+    static String validate(@NonNull String input, @NonNull String pattern) {
         if (!pattern.matches(input)) {
             throw new IllegalArgumentException("Expected input: [" + pattern + "], found: " + input);
         }
