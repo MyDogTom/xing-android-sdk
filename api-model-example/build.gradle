@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: "net.ltgt.apt"
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile libraries.moshi
+    compileOnly project(':api-compiler')
+    compile project(':api-annotations')
+    compileOnly "com.google.auto.value:auto-value:1.2"
+    apt "com.google.auto.value:auto-value:1.2"
+    compile libraries.junit
+    compile libraries.assertj
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

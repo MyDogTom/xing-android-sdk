@@ -16,6 +16,7 @@
 package com.xing.api.data.profile;
 
 import com.squareup.moshi.Json;
+import com.xing.api.annotations.CompanionForJson;
 import com.xing.api.data.SafeCalendar;
 import com.xing.api.internal.json.BirthDate;
 import com.xing.api.internal.json.CsvCollection;
