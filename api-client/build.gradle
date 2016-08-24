@@ -44,8 +44,9 @@ dependencies {
     compile libraries.okhttp
     compile libraries.moshi
 
-    compileOnly project(':api-compiler')
+    compileOnly project(':api-fields-companion-compiler')
     compile project(':api-annotations')
+    compile project(':api-fields-companion')
     testCompile libraries.mockWebServer
     testCompile libraries.junit
     testCompile libraries.assertj

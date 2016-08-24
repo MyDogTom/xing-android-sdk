@@ -2,9 +2,11 @@ package com.xing.example;
 
 import com.google.auto.value.AutoValue;
 import com.squareup.moshi.Json;
+import com.xing.api.annotations.CompanionForJson;
 import com.xing.example.Company.CompanyFieldsCompanion;
 
 @AutoValue
+@CompanionForJson
 public abstract class User {
 
     @Json(name ="first_name")
